@@ -40,6 +40,7 @@ export const libraryRouter = createTRPCRouter({
     }))
     .mutation(async ({ ctx, input }) => {
       const { db } = ctx;
+      
       return db.library.create({
         data: {
           name: input.name,
